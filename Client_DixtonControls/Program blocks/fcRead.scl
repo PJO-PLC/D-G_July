@@ -1,0 +1,40 @@
+﻿FUNCTION "fcRead" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+
+BEGIN
+	REGION PS1
+	    "dbData".solenoidValve1.scaledValeu := "Client interface_1_Data"."Read list".Variable.SV1scaledValeu;
+	    "dbData".solenoidValve1.rawValue := "Client interface_1_Data"."Read list".Variable.SV1rawValue;
+	END_REGION
+	
+	REGION PS2
+	    "dbData".solenoidValve2.scaledValeu := "Client interface_1_Data"."Read list".Variable.SV2scaledValeu;
+	    "dbData".solenoidValve2.rawValue := "Client interface_1_Data"."Read list".Variable.SV2rawValue;
+	END_REGION
+	
+	REGION PS3
+	    "dbData".solenoidValve3.scaledValeu := "Client interface_1_Data"."Read list".Variable.SV3scaledValeu;
+	    "dbData".solenoidValve3.rawValue := "Client interface_1_Data"."Read list".Variable.SV3rawValue;
+	END_REGION
+	
+	REGION OP
+	    "dbData".otherPressure := "Client interface_1_Data"."Read list".Variable.otherPressure;
+	END_REGION
+	
+	REGION valve
+	    "dbData".value := "Client interface_1_Data"."Read list".Variable.value;
+	END_REGION
+	
+	REGION postTestResult
+	    "dbData".postTestResult := "Client interface_1_Data"."Read list".Variable.postTestResult;
+	END_REGION
+	
+	REGION sequenceControl
+	    "dbData".sequenceControl.ActiveSequenceComplete := "Client interface_1_Data"."Read list".Variable.SQactiveSequenceComplete;
+	    "dbData".sequenceControl.activeSequenceFailed := "Client interface_1_Data"."Read list".Variable.SQactiveSequenceFailed;
+	    "dbData".sequenceControl.preTestSequenceActive := "Client interface_1_Data"."Read list".Variable.SQpreTestSequenceActive;
+	    "dbData".sequenceControl.mainSequenceActive := "Client interface_1_Data"."Read list".Variable.SQmainSequenceActive;
+	END_REGION
+END_FUNCTION
+

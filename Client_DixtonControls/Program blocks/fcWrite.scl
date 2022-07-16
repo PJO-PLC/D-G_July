@@ -1,0 +1,40 @@
+﻿FUNCTION "fcWrite" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+
+BEGIN
+	
+	
+	REGION solenoidValve1
+	    "Client interface_1_Data"."Write list".Variable.SV1rawMaximum := "dbData".solenoidValve1.rawMaximum;
+	    "Client interface_1_Data"."Write list".Variable.SV1rawMinimum := "dbData".solenoidValve1.rawMinimum;
+	    "Client interface_1_Data"."Write list".Variable.SV1scalledMaximium := "dbData".solenoidValve1.scalledMaximium;
+	    "Client interface_1_Data"."Write list".Variable.SV1scalledMinimum := "dbData".solenoidValve1.scalledMinimum;
+	END_REGION
+	
+	REGION solenoidValve2
+	    "Client interface_1_Data"."Write list".Variable.SV2rawMaximum := "dbData".solenoidValve2.rawMaximum;
+	    "Client interface_1_Data"."Write list".Variable.SV2rawMinimum := "dbData".solenoidValve2.rawMinimum;
+	    "Client interface_1_Data"."Write list".Variable.SV2scalledMaximium := "dbData".solenoidValve2.scalledMaximium;
+	    "Client interface_1_Data"."Write list".Variable.SV2scalledMinimum := "dbData".solenoidValve2.scalledMinimum;
+	END_REGION
+	
+	REGION solenoidValve3
+	    "Client interface_1_Data"."Write list".Variable.SV3rawMaximum := "dbData".solenoidValve3.rawMaximum;
+	    "Client interface_1_Data"."Write list".Variable.SV3rawMinimum := "dbData".solenoidValve3.rawMinimum;
+	    "Client interface_1_Data"."Write list".Variable.SV3scalledMaximium := "dbData".solenoidValve3.scalledMaximium;
+	    "Client interface_1_Data"."Write list".Variable.SV3scalledMinimum := "dbData".solenoidValve3.scalledMinimum;
+	END_REGION
+	
+	REGION _name_
+	    "Client interface_1_Data"."Write list".Variable.SQendSensorValidation := "dbData".sequenceControl.endSensorValidation;
+	    "Client interface_1_Data"."Write list".Variable.SQstartMainSequence := "dbData".sequenceControl.startMainSequence;
+	    "Client interface_1_Data"."Write list".Variable.SQstartSensorValidation := "dbData".sequenceControl.startSensorValidation;
+	    "Client interface_1_Data"."Write list".Variable."SQstartPre-TestSequecne" := "dbData".sequenceControl."startPre-TestSequecne";
+	END_REGION
+	
+	
+	
+	
+END_FUNCTION
+
